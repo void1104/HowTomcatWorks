@@ -1,0 +1,12 @@
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/core/SimpleLoader.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/startup/Bootstrap2.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/core/SimpleWrapper.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/startup/Bootstrap1.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/valves/ClientIPLoggerValve.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/core/SimpleWrapperValve.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/core/SimpleContext.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/valves/HeaderLoggerValve.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/core/SimpleContextMapper.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/core/SimpleContextValve.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/org/how/tomcat/works/ex05/App.java
+/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex05/src/main/java/ex05/pyrmont/core/SimplePipeline.java

@@ -85,8 +85,7 @@ public class EjbRef
     /**
      * Default factory for this reference.
      */
-    public static final String DEFAULT_FACTORY = 
-        org.apache.naming.factory.Constants.DEFAULT_EJB_FACTORY;
+    public static final String DEFAULT_FACTORY = null;
 
 
     /**

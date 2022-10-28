@@ -18,6 +18,12 @@
 	</properties>
 	
 	<dependencies>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.3</version><!-- 这里使用低版本的servlet -->
+		</dependency>
 		
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -31,7 +37,6 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
 
 	</dependencies>
 </project>

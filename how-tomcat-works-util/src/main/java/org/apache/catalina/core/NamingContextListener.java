@@ -295,8 +295,8 @@ public class NamingContextListener
 
             if (container instanceof Server) {
                 namingResources.addPropertyChangeListener(this);
-                org.apache.naming.factory.ResourceLinkFactory.setGlobalContext
-                    (namingContext);
+                //                org.apache.naming.factory.ResourceLinkFactory.setGlobalContext
+                //                    (namingContext);
                 try {
                     ContextBindings.bindClassLoader
                         (container, container, 
