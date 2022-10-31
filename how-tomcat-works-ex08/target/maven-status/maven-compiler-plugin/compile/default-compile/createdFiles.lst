@@ -1,7 +1,0 @@
-org/how/tomcat/works/ex08/App.class
-ex08/pyrmont/core/SimpleContextConfig.class
-ex08/pyrmont/startup/Bootstrap.class
-ex08/pyrmont/core/SimplePipeline$StandardPipelineValveContext.class
-ex08/pyrmont/core/SimpleWrapper.class
-ex08/pyrmont/core/SimplePipeline.class
-ex08/pyrmont/core/SimpleWrapperValve.class

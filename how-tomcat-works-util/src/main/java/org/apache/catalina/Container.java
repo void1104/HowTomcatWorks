@@ -59,6 +59,10 @@ import javax.naming.directory.DirContext;
  * @version $Revision: 1.7 $ $Date: 2001/11/09 19:37:50 $
  */
 
+/**
+ * Container设计满足以下条件:在部署应用时,Tomcat管理员可以通过编辑配置文件(server.xml)来决定使用哪种容器,
+ * 这是通过引入容器中的管道(pipeline)和阀(valve)的集合实现的.
+ */
 public interface Container {
 
 

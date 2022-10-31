@@ -14,6 +14,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.UnrecoverableKeyException;
 import java.security.KeyManagementException;
+
 import org.apache.catalina.Connector;
 import org.apache.catalina.Container;
 import org.apache.catalina.Lifecycle;
@@ -40,7 +41,7 @@ import org.apache.catalina.util.StringManager;
 
 
 public final class HttpConnector
-    implements Connector, Lifecycle, Runnable {
+        implements Connector, Lifecycle, Runnable {
 
 
     // ----------------------------------------------------- Instance Variables
@@ -59,8 +60,7 @@ public final class HttpConnector
 
 
     /**
-     * The IP address on which to bind, if any.  If <code>null</code>, all
-     * addresses on the server will be bound.
+     * The IP address on which to bind, if any.  If <code>null</code>, all addresses on the server will be bound.
      */
     private String address = null;
 
@@ -111,7 +111,7 @@ public final class HttpConnector
      * Descriptive information about this Connector implementation.
      */
     private static final String info =
-        "org.apache.catalina.connector.http.HttpConnector/1.0";
+            "org.apache.catalina.connector.http.HttpConnector/1.0";
 
 
     /**
@@ -133,8 +133,7 @@ public final class HttpConnector
 
 
     /**
-     * Timeout value on the incoming connection.
-     * Note : a value of 0 means no timeout.
+     * Timeout value on the incoming connection. Note : a value of 0 means no timeout.
      */
     private int connectionTimeout = Constants.DEFAULT_CONNECTION_TIMEOUT;
 
@@ -146,26 +145,23 @@ public final class HttpConnector
 
 
     /**
-     * The set of processors that have been created but are not currently
-     * being used to process a request.
+     * The set of processors that have been created but are not currently being used to process a request.
      */
     private Stack processors = new Stack();
 
 
     /**
-     * The server name to which we should pretend requests to this Connector
-     * were directed.  This is useful when operating Tomcat behind a proxy
-     * server, so that redirects get constructed accurately.  If not specified,
-     * the server name included in the <code>Host</code> header is used.
+     * The server name to which we should pretend requests to this Connector were directed.  This is useful when
+     * operating Tomcat behind a proxy server, so that redirects get constructed accurately.  If not specified, the
+     * server name included in the <code>Host</code> header is used.
      */
     private String proxyName = null;
 
 
     /**
-     * The server port to which we should pretent requests to this Connector
-     * were directed.  This is useful when operating Tomcat behind a proxy
-     * server, so that redirects get constructed accurately.  If not specified,
-     * the port number specified by the <code>port</code> property is used.
+     * The server port to which we should pretent requests to this Connector were directed.  This is useful when
+     * operating Tomcat behind a proxy server, so that redirects get constructed accurately.  If not specified, the port
+     * number specified by the <code>port</code> property is used.
      */
     private int proxyPort = 0;
 
@@ -177,15 +173,13 @@ public final class HttpConnector
 
 
     /**
-     * The request scheme that will be set on all requests received
-     * through this connector.
+     * The request scheme that will be set on all requests received through this connector.
      */
     private String scheme = "http";
 
 
     /**
-     * The secure connection flag that will be set on all requests received
-     * through this connector.
+     * The secure connection flag that will be set on all requests received through this connector.
      */
     private boolean secure = false;
 
@@ -200,7 +194,7 @@ public final class HttpConnector
      * The string manager for this package.
      */
     private StringManager sm =
-        StringManager.getManager(Constants.Package);
+            StringManager.getManager(Constants.Package);
 
 
     /**
@@ -407,8 +401,7 @@ public final class HttpConnector
 
 
     /**
-     * Return the Container used for processing requests received by this
-     * Connector.
+     * Return the Container used for processing requests received by this Connector.
      */
     public Container getContainer() {
 
@@ -418,8 +411,7 @@ public final class HttpConnector
 
 
     /**
-     * Set the Container used for processing requests received by this
-     * Connector.
+     * Set the Container used for processing requests received by this Connector.
      *
      * @param container The new Container to use
      */
@@ -632,9 +624,8 @@ public final class HttpConnector
 
 
     /**
-     * Return the port number to which a request should be redirected if
-     * it comes in on a non-SSL port and is subject to a security constraint
-     * with a transport guarantee that requires SSL.
+     * Return the port number to which a request should be redirected if it comes in on a non-SSL port and is subject to
+     * a security constraint with a transport guarantee that requires SSL.
      */
     public int getRedirectPort() {
 
@@ -656,8 +647,7 @@ public final class HttpConnector
 
 
     /**
-     * Return the scheme that will be assigned to requests received
-     * through this connector.  Default value is "http".
+     * Return the scheme that will be assigned to requests received through this connector.  Default value is "http".
      */
     public String getScheme() {
 
@@ -667,8 +657,7 @@ public final class HttpConnector
 
 
     /**
-     * Set the scheme that will be assigned to requests received through
-     * this connector.
+     * Set the scheme that will be assigned to requests received through this connector.
      *
      * @param scheme The new scheme
      */
@@ -680,8 +669,8 @@ public final class HttpConnector
 
 
     /**
-     * Return the secure connection flag that will be assigned to requests
-     * received through this connector.  Default value is "false".
+     * Return the secure connection flag that will be assigned to requests received through this connector.  Default
+     * value is "false".
      */
     public boolean getSecure() {
 
@@ -691,8 +680,7 @@ public final class HttpConnector
 
 
     /**
-     * Set the secure connection flag that will be assigned to requests
-     * received through this connector.
+     * Set the secure connection flag that will be assigned to requests received through this connector.
      *
      * @param secure The new secure connection flag
      */
@@ -714,8 +702,7 @@ public final class HttpConnector
 
 
     /**
-     * Set the TCP no delay flag which will be set on the socket after
-     * accepting a connection.
+     * Set the TCP no delay flag which will be set on the socket after accepting a connection.
      *
      * @param tcpNoDelay The new TCP no delay flag
      */
@@ -730,8 +717,8 @@ public final class HttpConnector
 
 
     /**
-     * Create (or allocate) and return a Request object suitable for
-     * specifying the contents of a Request to the responsible Container.
+     * Create (or allocate) and return a Request object suitable for specifying the contents of a Request to the
+     * responsible Container.
      */
     public Request createRequest() {
 
@@ -745,8 +732,8 @@ public final class HttpConnector
 
 
     /**
-     * Create (or allocate) and return a Response object suitable for
-     * receiving the contents of a Response from the responsible Container.
+     * Create (or allocate) and return a Response object suitable for receiving the contents of a Response from the
+     * responsible Container.
      */
     public Response createResponse() {
 
@@ -780,9 +767,8 @@ public final class HttpConnector
 
 
     /**
-     * Create (or allocate) and return an available processor for use in
-     * processing a specific HTTP request, if possible.  If the maximum
-     * allowed processors have already been created and are in use, return
+     * Create (or allocate) and return an available processor for use in processing a specific HTTP request, if
+     * possible.  If the maximum allowed processors have already been created and are in use, return
      * <code>null</code> instead.
      */
     private HttpProcessor createProcessor() {
@@ -834,7 +820,7 @@ public final class HttpConnector
     /**
      * Log a message on the Logger associated with our Container (if any).
      *
-     * @param message Message to be logged
+     * @param message   Message to be logged
      * @param throwable Associated exception
      */
     private void log(String message, Throwable throwable) {
@@ -854,8 +840,8 @@ public final class HttpConnector
 
 
     /**
-     * Create and return a new processor suitable for processing HTTP
-     * requests and returning the corresponding responses.
+     * Create and return a new processor suitable for processing HTTP requests and returning the corresponding
+     * responses.
      */
     private HttpProcessor newProcessor() {
 
@@ -877,26 +863,20 @@ public final class HttpConnector
 
 
     /**
-     * Open and return the server socket for this Connector.  If an IP
-     * address has been specified, the socket will be opened only on that
-     * address; otherwise it will be opened on all addresses.
+     * Open and return the server socket for this Connector.  If an IP address has been specified, the socket will be
+     * opened only on that address; otherwise it will be opened on all addresses.
      *
-     * @exception IOException                input/output or network error
-     * @exception KeyStoreException          error instantiating the
-     *                                       KeyStore from file (SSL only)
-     * @exception NoSuchAlgorithmException   KeyStore algorithm unsupported
-     *                                       by current provider (SSL only)
-     * @exception CertificateException       general certificate error (SSL only)
-     * @exception UnrecoverableKeyException  internal KeyStore problem with
-     *                                       the certificate (SSL only)
-     * @exception KeyManagementException     problem in the key management
-     *                                       layer (SSL only)
+     * @throws IOException               input/output or network error
+     * @throws KeyStoreException         error instantiating the KeyStore from file (SSL only)
+     * @throws NoSuchAlgorithmException  KeyStore algorithm unsupported by current provider (SSL only)
+     * @throws CertificateException      general certificate error (SSL only)
+     * @throws UnrecoverableKeyException internal KeyStore problem with the certificate (SSL only)
+     * @throws KeyManagementException    problem in the key management layer (SSL only)
      */
     private ServerSocket open()
-    throws IOException, KeyStoreException, NoSuchAlgorithmException,
-           CertificateException, UnrecoverableKeyException,
-           KeyManagementException
-    {
+            throws IOException, KeyStoreException, NoSuchAlgorithmException,
+            CertificateException, UnrecoverableKeyException,
+            KeyManagementException {
 
         // Acquire the server socket factory for this Connector
         ServerSocketFactory factory = getFactory();
@@ -919,7 +899,7 @@ public final class HttpConnector
                 return (factory.createSocket(port, acceptCount, is));
             } catch (BindException be) {
                 throw new BindException(be.getMessage() + ":" + address +
-                                        ":" + port);
+                        ":" + port);
             }
         } catch (Exception e) {
             log(sm.getString("httpConnector.noAddress", address));
@@ -937,8 +917,8 @@ public final class HttpConnector
 
 
     /**
-     * The background thread that listens for incoming TCP/IP connections and
-     * hands them off to an appropriate processor.
+     * The background thread that listens for incoming TCP/IP connections and hands them off to an appropriate
+     * processor.
      */
     public void run() {
         // Loop until we receive a shutdown command
@@ -946,11 +926,8 @@ public final class HttpConnector
             // Accept the next incoming connection from the server socket
             Socket socket = null;
             try {
-                //                if (debug >= 3)
-                //                    log("run: Waiting on serverSocket.accept()");
                 socket = serverSocket.accept();
-                //                if (debug >= 3)
-                //                    log("run: Returned from serverSocket.accept()");
+
                 if (connectionTimeout > 0)
                     socket.setSoTimeout(connectionTimeout);
                 socket.setTcpNoDelay(tcpNoDelay);
@@ -958,24 +935,18 @@ public final class HttpConnector
                 log("socket accept security exception", ace);
                 continue;
             } catch (IOException e) {
-                //                if (debug >= 3)
-                //                    log("run: Accept returned IOException", e);
+
                 try {
                     // If reopening fails, exit
                     synchronized (threadSync) {
                         if (started && !stopped)
                             log("accept error: ", e);
                         if (!stopped) {
-                            //                    if (debug >= 3)
-                            //                        log("run: Closing server socket");
                             serverSocket.close();
-                            //                        if (debug >= 3)
-                            //                            log("run: Reopening server socket");
+
                             serverSocket = open();
                         }
                     }
-                    //                    if (debug >= 3)
-                    //                        log("run: IOException processing completed");
                 } catch (IOException ioe) {
                     log("socket reopen, io problem: ", ioe);
                     break;
@@ -1010,8 +981,8 @@ public final class HttpConnector
                 }
                 continue;
             }
-            //            if (debug >= 3)
-            //                log("run: Assigning socket to processor " + processor);
+            // assign方法直接返回, 而不等待HttpProcessor实例完成解析,这样HttpConnector才能持续服务
+            // 传入的HTTP请求,而HttpProcessor实例是在其自己的线程中完成解析工作的.
             processor.assign(socket);
 
             // The processor will recycle itself when it finishes
@@ -1019,8 +990,6 @@ public final class HttpConnector
         }
 
         // Notify the threadStop() method that we have shut ourselves down
-        //        if (debug >= 3)
-        //            log("run: Notifying threadStop() that we have shut down");
         synchronized (threadSync) {
             threadSync.notifyAll();
         }
@@ -1076,8 +1045,8 @@ public final class HttpConnector
 
 
     /**
-     * Get the lifecycle listeners associated with this lifecycle. If this
-     * Lifecycle has no listeners registered, a zero-length array is returned.
+     * Get the lifecycle listeners associated with this lifecycle. If this Lifecycle has no listeners registered, a
+     * zero-length array is returned.
      */
     public LifecycleListener[] findLifecycleListeners() {
 
@@ -1102,12 +1071,11 @@ public final class HttpConnector
      * Initialize this connector (create ServerSocket here!)
      */
     public void initialize()
-    throws LifecycleException {
+            throws LifecycleException {
         if (initialized)
-            throw new LifecycleException (
-                sm.getString("httpConnector.alreadyInitialized"));
+            throw new LifecycleException(sm.getString("httpConnector.alreadyInitialized"));
 
-        this.initialized=true;
+        this.initialized = true;
         Exception eRethrow = null;
 
         // Establish a server socket on the specified port
@@ -1133,23 +1101,20 @@ public final class HttpConnector
             eRethrow = kme;
         }
 
-        if ( eRethrow != null )
+        if (eRethrow != null)
             throw new LifecycleException(threadName + ".open", eRethrow);
-
     }
-
 
     /**
      * Begin processing requests via this Connector.
      *
-     * @exception LifecycleException if a fatal startup error occurs
+     * @throws LifecycleException if a fatal startup error occurs
      */
     public void start() throws LifecycleException {
 
         // Validate and update our current state
         if (started)
-            throw new LifecycleException
-                (sm.getString("httpConnector.alreadyStarted"));
+            throw new LifecycleException(sm.getString("httpConnector.alreadyStarted"));
         threadName = "HttpConnector[" + port + "]";
         lifecycle.fireLifecycleEvent(START_EVENT, null);
         started = true;
@@ -1171,14 +1136,13 @@ public final class HttpConnector
     /**
      * Terminate processing requests via this Connector.
      *
-     * @exception LifecycleException if a fatal shutdown error occurs
+     * @throws LifecycleException if a fatal shutdown error occurs
      */
     public void stop() throws LifecycleException {
 
         // Validate and update our current state
         if (!started)
-            throw new LifecycleException
-                (sm.getString("httpConnector.notStarted"));
+            throw new LifecycleException(sm.getString("httpConnector.notStarted"));
         lifecycle.fireLifecycleEvent(STOP_EVENT, null);
         started = false;
 
@@ -1200,7 +1164,7 @@ public final class HttpConnector
                 try {
                     serverSocket.close();
                 } catch (IOException e) {
-                    ;
+
                 }
             }
             // Stop our background thread

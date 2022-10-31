@@ -1,9 +1,0 @@
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/org/how/tomcat/works/ex10/App.java
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/ex10/pyrmont/realm/SimpleUserDatabaseRealm.java
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/ex10/pyrmont/realm/SimpleRealm.java
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/ex10/pyrmont/core/SimpleContextConfig.java
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/ex10/pyrmont/startup/Bootstrap2.java
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/ex10/pyrmont/core/SimpleWrapperValve.java
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/ex10/pyrmont/core/SimpleWrapper.java
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/ex10/pyrmont/startup/Bootstrap1.java
-/home/ubuntu/proj/HowTomcatWorks/how-tomcat-works-ex10/src/main/java/ex10/pyrmont/core/SimplePipeline.java
