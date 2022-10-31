@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <file url="file://$PROJECT_DIR$/how-tomcat-works-ex03/src/main/java/ex03/pyrmont/connector/http/LocalStrings.properties" />
+    <file url="file://$PROJECT_DIR$/how-tomcat-works-ex03/src/main/java/ex03/pyrmont/connector/http/LocalStrings_es.properties" />
+    <file url="file://$PROJECT_DIR$/how-tomcat-works-ex03/src/main/java/ex03/pyrmont/connector/http/LocalStrings_ja.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/how-tomcat-works-ex03/src/main/java/ex03/pyrmont/connector/http/LocalStrings.properties" />
+      <file value="file://$PROJECT_DIR$/how-tomcat-works-ex03/src/main/java/ex03/pyrmont/connector/http/LocalStrings_es.properties" />
+      <file value="file://$PROJECT_DIR$/how-tomcat-works-ex03/src/main/java/ex03/pyrmont/connector/http/LocalStrings_ja.properties" />
+      <base-name>LocalStrings</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>
