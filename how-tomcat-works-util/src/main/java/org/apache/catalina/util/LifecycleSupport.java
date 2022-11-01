@@ -71,8 +71,7 @@ import org.apache.catalina.LifecycleListener;
 
 
 /**
- * Support class to assist in firing LifecycleEvent notifications to
- * registered LifecycleListeners.
+ * Support class to assist in firing LifecycleEvent notifications to registered LifecycleListeners.
  *
  * @author Craig R. McClanahan
  * @version $Id: LifecycleSupport.java,v 1.3 2001/11/09 19:40:54 remm Exp $
@@ -85,11 +84,9 @@ public final class LifecycleSupport {
 
 
     /**
-     * Construct a new LifecycleSupport object associated with the specified
-     * Lifecycle component.
+     * Construct a new LifecycleSupport object associated with the specified Lifecycle component.
      *
-     * @param lifecycle The Lifecycle component that will be the source
-     *  of events that we fire
+     * @param lifecycle The Lifecycle component that will be the source of events that we fire
      */
     public LifecycleSupport(Lifecycle lifecycle) {
 
@@ -124,21 +121,19 @@ public final class LifecycleSupport {
      */
     public void addLifecycleListener(LifecycleListener listener) {
 
-      synchronized (listeners) {
-          LifecycleListener results[] =
-            new LifecycleListener[listeners.length + 1];
-          for (int i = 0; i < listeners.length; i++)
-              results[i] = listeners[i];
-          results[listeners.length] = listener;
-          listeners = results;
-      }
+        synchronized (listeners) {
+            LifecycleListener[] results = new LifecycleListener[listeners.length + 1];
+            System.arraycopy(listeners, 0, results, 0, listeners.length);
+            results[listeners.length] = listener;
+            listeners = results;
+        }
 
     }
 
 
     /**
-     * Get the lifecycle listeners associated with this lifecycle. If this 
-     * Lifecycle has no listeners registered, a zero-length array is returned.
+     * Get the lifecycle listeners associated with this lifecycle. If this Lifecycle has no listeners registered, a
+     * zero-length array is returned.
      */
     public LifecycleListener[] findLifecycleListeners() {
 
@@ -148,9 +143,8 @@ public final class LifecycleSupport {
 
 
     /**
-     * Notify all lifecycle event listeners that a particular event has
-     * occurred for this Container.  The default implementation performs
-     * this notification synchronously using the calling thread.
+     * Notify all lifecycle event listeners that a particular event has occurred for this Container.  The default
+     * implementation performs this notification synchronously using the calling thread.
      *
      * @param type Event type
      * @param data Event data
@@ -158,12 +152,12 @@ public final class LifecycleSupport {
     public void fireLifecycleEvent(String type, Object data) {
 
         LifecycleEvent event = new LifecycleEvent(lifecycle, type, data);
-        LifecycleListener interested[] = null;
+        LifecycleListener[] interested = null;
         synchronized (listeners) {
-            interested = (LifecycleListener[]) listeners.clone();
+            interested = listeners.clone();
         }
-        for (int i = 0; i < interested.length; i++)
-            interested[i].lifecycleEvent(event);
+        for (LifecycleListener lifecycleListener : interested)
+            lifecycleListener.lifecycleEvent(event);
 
     }
 
@@ -185,8 +179,7 @@ public final class LifecycleSupport {
             }
             if (n < 0)
                 return;
-            LifecycleListener results[] =
-              new LifecycleListener[listeners.length - 1];
+            LifecycleListener[] results = new LifecycleListener[listeners.length - 1];
             int j = 0;
             for (int i = 0; i < listeners.length; i++) {
                 if (i != n)

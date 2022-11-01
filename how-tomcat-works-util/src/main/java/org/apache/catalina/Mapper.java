@@ -66,13 +66,11 @@ package org.apache.catalina;
 
 
 /**
- * Interface defining methods that a parent Container may implement to select
- * a subordinate Container to process a particular Request, optionally
- * modifying the properties of the Request to reflect the selections made.
+ * Interface defining methods that a parent Container may implement to select a subordinate Container to process a
+ * particular Request, optionally modifying the properties of the Request to reflect the selections made.
  * <p>
- * A typical Container may be associated with a single Mapper that processes
- * all requests to that Container, or a Mapper per request protocol that allows
- * the same Container to support multiple protocols at once.
+ * A typical Container may be associated with a single Mapper that processes all requests to that Container, or a Mapper
+ * per request protocol that allows the same Container to support multiple protocols at once.
  *
  * @author Craig R. McClanahan
  * @version $Revision: 1.3 $ $Date: 2001/07/22 20:13:30 $
@@ -94,9 +92,7 @@ public interface Mapper {
      * Set the Container with which this Mapper is associated.
      *
      * @param container The newly associated Container
-     *
-     * @exception IllegalArgumentException if this Container is not
-     *  acceptable to this Mapper
+     * @throws IllegalArgumentException if this Container is not acceptable to this Mapper
      */
     public void setContainer(Container container);
 
@@ -119,12 +115,11 @@ public interface Mapper {
 
 
     /**
-     * Return the child Container that should be used to process this Request,
-     * based upon its characteristics.  If no such child Container can be
-     * identified, return <code>null</code> instead.
+     * Return the child Container that should be used to process this Request, based upon its characteristics.  If no
+     * such child Container can be identified, return <code>null</code> instead. - 返回要处理某个特定请求的子容器的实例
      *
      * @param request Request being processed
-     * @param update Update the Request to reflect the mapping selection?
+     * @param update  Update the Request to reflect the mapping selection?
      */
     public Container map(Request request, boolean update);
 
